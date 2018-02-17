@@ -39,7 +39,7 @@ const Vote = function() {
         {properties.map(property => (
           <div style={{ padding: 16, margin: 16, borderColor: '#ddd', borderWidth: 1, borderStyle: 'solid' }} key={property.name} className="container">
             <div style={{ margin: 'auto', maxWidth: '100%' }} className="row">
-              <div style={{ height: 300, backgroundImage: `url(${property.imageUrl})` }} className="col-sm-4" />
+              <div style={{ height: 300, backgroundSize: 'cover', backgroundImage: `url(${property.imageUrl})` }} className="col-sm-4" />
               
               <div style={{ fontSize: 17 }} className="col-sm-8">
                 <div style={{ fontWeight: 600, paddingTop: 12, fontSize: 22 }}>
