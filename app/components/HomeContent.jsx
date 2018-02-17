@@ -3,7 +3,7 @@ const UnorderedList = require('./UnorderedList');
 const Header = require('./Header');
 
 /* the main page for the index route of this app */
-const Home = function() {
+const HomeContent = function() {
   return (
     <div>
       <div className="container">
@@ -29,4 +29,4 @@ const Home = function() {
   );
 }
 
-module.exports = Home;
+module.exports = HomeContent;
