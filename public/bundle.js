@@ -34883,15 +34883,19 @@ const { Button } = __webpack_require__(355);
 const Contribute = function() {
   return (
     React.createElement("div", null, 
-      React.createElement("div", {style: { fontSize: 50, textAlign: 'center'}}, 
-        "How much Stake would you like to buy?"
-      ), 
-      React.createElement("div", null, 
-        React.createElement("div", {style: { display: 'inline-block'}}, 
-          React.createElement("input", null)
-        ), 
-        React.createElement("div", {style: { display: 'inline-block'}}, 
-          React.createElement(Button, null, " Preserve ")
+      React.createElement("div", {style: { textAlign: 'center'}}, 
+        React.createElement("div", {style: { maxWidth: 600}}, 
+          React.createElement("div", {style: { fontSize: 50}}, 
+            "How much Stake would you like to buy?"
+          ), 
+          React.createElement("div", null, 
+            React.createElement("div", {style: { display: 'inline-block'}}, 
+              React.createElement("input", null)
+            ), 
+            React.createElement("div", {style: { display: 'inline-block'}}, 
+              React.createElement(Button, null, " Preserve ")
+            )
+          )
         )
       ), 
       React.createElement(UnorderedList, null)

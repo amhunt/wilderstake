@@ -7,15 +7,19 @@ const { Button } = require('react-bootstrap');
 const Contribute = function() {
   return (
     <div>
-      <div style={{ fontSize: 50, textAlign: 'center' }}>
-        How much Stake would you like to buy?
-      </div>
-      <div>
-        <div style={{ display: 'inline-block' }}>
-          <input />
-        </div>
-        <div style={{ display: 'inline-block' }}>
-          <Button> Preserve </Button>
+      <div style={{ textAlign: 'center' }}>
+        <div style={{ maxWidth: 600 }}>
+          <div style={{ fontSize: 50 }}>
+            How much Stake would you like to buy?
+          </div>
+          <div>
+            <div style={{ display: 'inline-block' }}>
+              <input />
+            </div>
+            <div style={{ display: 'inline-block' }}>
+              <Button> Preserve </Button>
+            </div>
+          </div>
         </div>
       </div>
       <UnorderedList />
