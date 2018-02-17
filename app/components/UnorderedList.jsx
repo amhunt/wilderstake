@@ -20,12 +20,12 @@ const explanationPoints = [
    with each item as <li> elements */
 const Explanation = function() {
   return (
-    <div className="container">
+    <div style={{ paddingTop: 20 }} className="container">
       <div className="row">
         {explanationPoints.map(point => (
-          <div className="col-4-sm">
-            <div style={{ fontStyle: 'bold' }}>{point.title}</div>
-            <div>{point.description}</div>
+          <div className="col-sm-4">
+            <div style={{ paddingTop: 12, fontWeight: 'bold', fontSize: 20 }}>{point.title}</div>
+            <div style={{ paddingTop: 4, fontSize: 20 }}>{point.description}</div>
           </div>
         ))}
       </div>

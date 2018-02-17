@@ -22425,12 +22425,7 @@ const Home = function() {
           )
         )
       ), 
-
-      React.createElement(UnorderedList, {items: dependenciesArray}), 
-
-      React.createElement("p", null, "Look in ", React.createElement("code", null, "app/components/"), " for two example components:"), 
-
-      React.createElement(UnorderedList, {items: componentsMade})
+      React.createElement(UnorderedList, {items: dependenciesArray})
     )
   );
 }
@@ -22463,12 +22458,12 @@ const explanationPoints = [
    with each item as <li> elements */
 const Explanation = function() {
   return (
-    React.createElement("div", {className: "container"}, 
+    React.createElement("div", {style: { paddingTop: 20}, className: "container"}, 
       React.createElement("div", {className: "row"}, 
         explanationPoints.map(point => (
-          React.createElement("div", {className: "col-4-sm"}, 
-            React.createElement("div", {style: { fontStyle: 'bold'}}, point.title), 
-            React.createElement("div", null, point.description)
+          React.createElement("div", {className: "col-sm-4"}, 
+            React.createElement("div", {style: { paddingTop: 12, fontWeight: 'bold', fontSize: 20}}, point.title), 
+            React.createElement("div", {style: { paddingTop: 4, fontSize: 20}}, point.description)
           )
         ))
       )

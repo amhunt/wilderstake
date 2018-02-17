@@ -38,12 +38,7 @@ const Home = function() {
           </div>
         </div>
       </div>
-
       <UnorderedList items={dependenciesArray} />
-
-      <p>Look in <code>app/components/</code> for two example components:</p>
-
-      <UnorderedList items={componentsMade} />
     </div>
   );
 }
