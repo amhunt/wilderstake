@@ -29,6 +29,8 @@ const properties = [
   },
 ];
 
+const BLOCK_TIME_SEC = 15;
+
 /* the main page for the index route of this app */
 const Vote = function() {
   if (typeof window.web3 !== 'undefined') {
@@ -39,10 +41,13 @@ const Vote = function() {
     alert('Please install Mist or MetaMask to use Blockbin');
   }
   let remainingBlocks;
-  let estRemainingTime;
+  let timeRemainingStr;
   if (this.web3) {
     remainingBlocks = this.web3.eth.currentBlock % 84000;
-    estRemainingTime = this.web3.eth.
+    const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
+    var date = new Date(null);
+    date.setSeconds(estRemainingTimeSecs);
+    timeRemainingStr = date.toISOString().substr(11, 8);
   }
   
   return (
@@ -50,6 +55,8 @@ const Vote = function() {
       <div style={{ textAlign: 'center', paddingBottom: 20 }}>
         <h2>What should we buy next?</h2>
         <h3>Use your stake to vote:</h3>
+        {this.web3 && (
+          )}
       </div>
       <div>
         {properties.map(property => (
