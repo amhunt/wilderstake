@@ -1,5 +1,3 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
 const React = require('react');
 const UnorderedList = require('./UnorderedList');
 const Header = require('./Header');
@@ -8,7 +6,7 @@ const Header = require('./Header');
 const Home = function() {
   return (
     <div>
-      <div className="container" style={{ paddingTop: 50 }}>
+      <div className="container">
         <div style={{ textAlign: 'center' }} className="row">
           <div className="col-sm-6">
             <h1 style={{ paddingTop: 8, color: '#567D3E' }}>

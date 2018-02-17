@@ -1,4 +1,5 @@
 const React = require('react');
+const { Link } = require('react-router-dom');
 
 const items = [
   {
@@ -26,7 +27,7 @@ const Header = function() {
       <div style={{ display: 'inline-block', float: 'right', paddingTop: 6 }}>
         {items.map((item, i) => (
           <span style={{ fontSize: 20, paddingRight: 12 }} key={i}>
-            <a style={{ color: '#333' }} href={item.href}>{item.name}</a>
+            <Link style={{ color: '#333' }} to={item.url}>{item.name}</Link>
           </span>
         ))}
       </div>
