@@ -5,6 +5,7 @@ const UnorderedList = require('./UnorderedList');
 const Header = require('./Header');
 const HomeContent = require('./HomeContent');
 const Contribute = require('./Contribute');
+const Vote = require('./Vote');
 
 /* the main page for the index route of this app */
 const Home = function() { 
@@ -16,7 +17,7 @@ const Home = function() {
           <Route exact path="/" component={HomeContent} />
           <Route path="/about" component={UnorderedList} />
           <Route path="/contribute" component={Contribute} />
-          <Route path="/vote" component={UnorderedList} />
+          <Route path="/vote" component={Vote} />
         </div>
       </div>
     </BrowserRouter>

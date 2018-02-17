@@ -4,7 +4,7 @@ const { Link } = require('react-router-dom');
 const items = [
   {
     name: 'Home',
-    url: '/home',
+    url: '/',
   },
   {
     name: 'About',
