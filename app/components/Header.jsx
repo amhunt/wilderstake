@@ -21,7 +21,7 @@ const items = [
 
 const Header = function() {
   return (
-    <div style={{ float: 'right', paddingTop: 6 }}>
+    <div style={{ float, float: 'right', paddingTop: 6 }}>
       {items.map((item, i) => (
         <span style={{ fontSize: 20, paddingRight: 12 }} key={i}>
           <a style={{ color: '#333' }} href={item.href}>{item.name}</a>

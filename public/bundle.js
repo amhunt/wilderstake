@@ -22500,7 +22500,7 @@ const items = [
 
 const Header = function() {
   return (
-    React.createElement("div", {style: { float: 'right', paddingTop: 6}}, 
+    React.createElement("div", {style: { float, float: 'right', paddingTop: 6}}, 
       items.map((item, i) => (
         React.createElement("span", {style: { fontSize: 20, paddingRight: 12}, key: i}, 
           React.createElement("a", {style: { color: '#333'}, href: item.href}, item.name)
