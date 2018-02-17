@@ -9,15 +9,3 @@ ReactDOM.render(
   <Home />,
   document.getElementById('main')
 );
-
-ReactDOM.render(
-  <Router history={history}>
-    <Provider store={store>
-      <Switch>
-        <Route exact path={'/'} component={Home} />
-        
-      </Switch>
-    </Provider>
-  </Router>,
-  document.getElementById('main')
-);
