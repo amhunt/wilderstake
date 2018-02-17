@@ -46671,7 +46671,7 @@ const properties = [
     name: 'Alaskan Wilderness',
     submitter: 'Jamie. L',
     whyDesc: 'This land means so much to me. It runs right by the river that I grew up next to. We used to raft down to Denver, but this property is now under risk of deforestation and mining. Please help me protect this sacred property!',
-    imageUrl: '',
+    imageUrl: 'http://www.dronestagr.am/aerial-lake-meets-forest-chiang-mai-thailand/',
     cost: '$67,000',
     votes: '1805',
   },
@@ -46689,11 +46689,26 @@ const properties = [
 const Vote = function() {
   return (
     React.createElement("div", null, 
-      React.createElement("div", {style: { textAlign: 'center'}}, 
+      React.createElement("div", {style: { textAlign: 'center', paddingBottom: 20}}, 
         React.createElement("h2", null, "What should we buy next?"), 
         React.createElement("h3", null, "Cast your vote:")
+      ), 
+      React.createElement("div", null, 
+        properties.map(property => (
+          React.createElement("div", {style: { height: 300}, key: property.name, className: "container"}, 
+            React.createElement("div", {className: "row"}, 
+              React.createElement("div", {style: { height: 300, backgroundImage: `url(${property.imageUrl})`}, className: "col-sm-4"}
+              ), 
+              React.createElement("div", {className: "col-sm-8"}, 
+                React.createElement("div", null, "Name of submitter: ", property.submitter), 
+                React.createElement("div", null, "Submitter's appeal: ", property.whyDesc), 
+                React.createElement("div", null, "Property cost: ", property.cost), 
+                React.createElement("div", null, "Current votes: ", property.votes)
+              )
+            )
+          )
+        ))
       )
-      
     )
   );
 }

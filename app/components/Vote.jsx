@@ -31,12 +31,25 @@ const properties = [
 const Vote = function() {
   return (
     <div>
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: 'center', paddingBottom: 20 }}>
         <h2>What should we buy next?</h2>
         <h3>Cast your vote:</h3>
       </div>
       <div>
-        
+        {properties.map(property => (
+          <div style={{ padding: 16, borderColor: '#ddd', borderWidth: ' }} key={property.name} className="container">
+            <div className="row">
+              <div style={{ height: 300, backgroundImage: `url(${property.imageUrl})` }} className="col-sm-4">
+              </div>
+              <div className="col-sm-8">
+                <div>Name of submitter: {property.submitter}</div>
+                <div>Submitter's appeal: {property.whyDesc}</div>
+                <div>Property cost: {property.cost}</div>
+                <div>Current votes: {property.votes}</div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
