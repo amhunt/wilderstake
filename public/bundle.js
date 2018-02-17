@@ -9753,7 +9753,12 @@ const ReactDOM = __webpack_require__(98);
 /* Import Components */
 const Home = __webpack_require__(184);
 
-ReactDOM.render(React.createElement(Home, null), document.getElementById('main'));
+ReactDOM.render(
+  React.createElement(BrowserRouter, null, 
+    React.createElement(Home, null)
+  ),
+  document.getElementById('main')
+);
 
 /***/ }),
 /* 83 */
