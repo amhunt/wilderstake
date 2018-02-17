@@ -1,6 +1,7 @@
 const React = require('react');
 const Web3 = require('web3');
 const { Button } = require('react-bootstrap');
+const Estimate = require('./Estimate');
 
 const properties = [
   {
@@ -42,6 +43,8 @@ class Vote extends React.Component {
   }
   
   render() {
+    const { timeRemainingStr } = this.state;
+    
     if (typeof window.web3 !== 'undefined') {
       console.log('using mist or metamask');
       const newWeb3 = new Web3(window.web3.currentProvider);
@@ -49,15 +52,14 @@ class Vote extends React.Component {
     } else {
       alert('Please install Mist or MetaMask to use Blockbin');
     }
-    let remainingBlocks;
-    let timeRemainingStr;
-    if (this.web3) {
+    
+    if (this.web3 && !this.state.timeRemainingStr) {
       this.web3.eth.getBlockNumber((error, result) => {
-        remainingBlocks = result % 84000;
+        const remainingBlocks = result % 84000;
         const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
         var date = new Date(null);
         date.setSeconds(estRemainingTimeSecs);
-        this.setState( timeRemainingStr: date.toISOString().substr(11, 8)};
+        this.setState({ timeRemainingStr: date.toISOString().substr(11, 8) });
       });
     }
   
