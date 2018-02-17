@@ -69571,14 +69571,16 @@ class Vote extends React.Component {
               React.createElement("div", {style: { margin: 'auto', maxWidth: '100%'}, className: "row"}, 
                 React.createElement("div", {style: { height: 300, backgroundSize: 'cover', backgroundImage: `url(${property.imageUrl})`}, className: "col-sm-4"}), 
                 React.createElement("div", {style: { fontSize: 17}, className: "col-sm-8"}, 
-                  React.createElement("div", {style: { fontWeight: 600, paddingTop: 12, fontSize: 22}}, 
-                    property.name
-                  ), 
-                  React.createElement("div", null, "Name of submitter: ", property.submitter), 
-                  React.createElement("div", null, "Submitter's appeal: ", property.whyDesc), 
-                  React.createElement("div", null, "Property cost: ", property.cost), 
-                  React.createElement("div", null, "Current votes: ", property.votes), 
-                  React.createElement(Button, {style: { position: 'absolute'}}, "Vote")
+                  React.createElement("div", {style: { height: 300}}, 
+                    React.createElement("div", {style: { fontWeight: 600, paddingTop: 12, fontSize: 22}}, 
+                      property.name
+                    ), 
+                    React.createElement("div", null, "Name of submitter: ", property.submitter), 
+                    React.createElement("div", null, "Submitter's appeal: ", property.whyDesc), 
+                    React.createElement("div", null, "Property cost: ", property.cost), 
+                    React.createElement("div", null, "Current votes: ", property.votes), 
+                    React.createElement("div", {style: { fontWeight: 'bold'}}, " ", React.createElement(Button, {style: { position: 'absolute'}}, "Vote"))
+                  )
                 )
               )
             )

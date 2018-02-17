@@ -75,14 +75,16 @@ class Vote extends React.Component {
               <div style={{ margin: 'auto', maxWidth: '100%' }} className="row">
                 <div style={{ height: 300, backgroundSize: 'cover', backgroundImage: `url(${property.imageUrl})` }} className="col-sm-4" />
                 <div style={{ fontSize: 17 }} className="col-sm-8">
-                  <div style={{ fontWeight: 600, paddingTop: 12, fontSize: 22 }}>
-                    {property.name}
+                  <div style={{ height: 300 }}>
+                    <div style={{ fontWeight: 600, paddingTop: 12, fontSize: 22 }}>
+                      {property.name}
+                    </div>
+                    <div>Name of submitter: {property.submitter}</div>
+                    <div>Submitter's appeal: {property.whyDesc}</div>
+                    <div>Property cost: {property.cost}</div>
+                    <div>Current votes: {property.votes}</div>
+                    <div style={{ fontWeight: 'bold' }}> <Button style={{ position: 'absolute' }}>Vote</Button></div>
                   </div>
-                  <div>Name of submitter: {property.submitter}</div>
-                  <div>Submitter's appeal: {property.whyDesc}</div>
-                  <div>Property cost: {property.cost}</div>
-                  <div>Current votes: {property.votes}</div>
-                  <Button style={{ position: 'absolute' }}>Vote</Button>
                 </div>
               </div>
             </div>
