@@ -18,7 +18,17 @@ const componentsMade = [
 const HelloWorld = function() {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <div class="column-stuff">
+        <h1>
+          WilderStake
+        </h1>
+        <h2 class="bold">
+          conservation, together
+        </h2>
+      </div>
+      <div class="column-stuff">
+        <img style={{ maxWidth: 500 }} src="https://cdn.glitch.com/471debc4-30c7-4d8b-8218-7591bd219e08%2Fsergei-akulich-47326.jpg?1518850404671" />
+      </div>
 
       <p>This is a starter <a href="http://glitch.com">Glitch</a> app for React! It uses 
         only a few dependencies to get you started on working with React:</p>
