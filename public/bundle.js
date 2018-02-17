@@ -46660,10 +46660,28 @@ const React = __webpack_require__(0);
 
 const properties = [
   {
-    name: '',
-    whyDesc: '',
+    name: 'Colorado forest',
+    submitter: 'Jamie. L',
+    whyDesc: 'This land means so much to me. It runs right by the river that I grew up next to. We used to raft down to Denver, but this property is now under risk of deforestation and mining. Please help me protect this sacred property!',
+    imageUrl: 'https://wallup.net/wp-content/uploads/2016/01/275917-landscape-nature-forest-lake-colorful-fall-trees-water-blue-red-yellow-green-aerial_view-748x468.jpg',
+    cost: '$9,000',
+    votes: '2489',
+  },
+  {
+    name: 'Alaskan Wilderness',
+    submitter: 'Jamie. L',
+    whyDesc: 'This land means so much to me. It runs right by the river that I grew up next to. We used to raft down to Denver, but this property is now under risk of deforestation and mining. Please help me protect this sacred property!',
     imageUrl: '',
-    cost: '',
+    cost: '$67,000',
+    votes: '1805',
+  },
+  {
+    name: 'Oregon Butte',
+    submitter: 'Jamie. L',
+    whyDesc: 'This land means so much to me. It runs right by the river that I grew up next to. We used to raft down to Denver, but this property is now under risk of deforestation and mining. Please help me protect this sacred property!',
+    imageUrl: '',
+    cost: '$90,000',
+    votes: '497',
   },
 ];
 
