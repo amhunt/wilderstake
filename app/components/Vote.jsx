@@ -1,6 +1,8 @@
 const React = require('react');
 const Web3 = require('web3');
 
+const { Button } = 'react-bootstrap';
+
 const properties = [
   {
     name: 'Colorado forest',
@@ -56,6 +58,7 @@ const Vote = function() {
                 <div>Submitter's appeal: {property.whyDesc}</div>
                 <div>Property cost: {property.cost}</div>
                 <div>Current votes: {property.votes}</div>
+                <div style={{
               </div>
             </div>
           </div>

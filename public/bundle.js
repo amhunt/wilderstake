@@ -53266,6 +53266,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 const React = __webpack_require__(0);
 const Web3 = __webpack_require__(387);
 
+const { Button } = 'react-bootstrap';
+
 const properties = [
   {
     name: 'Colorado forest',
