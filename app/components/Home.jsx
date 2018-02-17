@@ -1,7 +1,7 @@
 const { BrowserRouter, Route } = require('react-router-dom');
 
 const React = require('react');
-const UnorderedList = require('./UnorderedList');
+const Explanation = require('./Explanation');
 const Header = require('./Header');
 const HomeContent = require('./HomeContent');
 const Contribute = require('./Contribute');
@@ -15,7 +15,7 @@ const Home = function() {
         <Header />
         <div style={{ paddingTop: 50 }}>
           <Route exact path="/" component={HomeContent} />
-          <Route path="/about" component={UnorderedList} />
+          <Route path="/about" component={Explanation} />
           <Route path="/contribute" component={Contribute} />
           <Route path="/vote" component={Vote} />
         </div>

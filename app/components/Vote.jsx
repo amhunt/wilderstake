@@ -1,4 +1,5 @@
 const React = require('react');
+const Web3 = require('web3');
 
 const properties = [
   {
@@ -29,6 +30,13 @@ const properties = [
 
 /* the main page for the index route of this app */
 const Vote = function() {
+  if (typeof window.web3 !== 'undefined') {
+    console.log('using mist or metamask');
+    const newWeb3 = new Web3(window.web3.currentProvider);
+    this.web3 = newWeb3;
+  } else {
+    alert('Please install Mist or MetaMask to use Blockbin');
+  }
   return (
     <div>
       <div style={{ textAlign: 'center', paddingBottom: 20 }}>

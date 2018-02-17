@@ -1,5 +1,5 @@
 const React = require('react');
-const UnorderedList = require('./UnorderedList');
+const Explanation = require('./Explanation');
 const Header = require('./Header');
 
 /* the main page for the index route of this app */
@@ -24,7 +24,7 @@ const HomeContent = function() {
           </div>
         </div>
       </div>
-      <UnorderedList />
+      <Explanation />
     </div>
   );
 }

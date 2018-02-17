@@ -23,7 +23,7 @@ const Explanation = function() {
     <div style={{ paddingTop: 20 }} className="container">
       <div className="row">
         {explanationPoints.map(point => (
-          <div className="col-sm-4">
+          <div key={point.title} className="col-sm-4">
             <div style={{ paddingTop: 12, fontWeight: 'bold', fontSize: 20 }}>{point.title}</div>
             <div style={{ paddingTop: 4, fontSize: 20 }}>{point.description}</div>
           </div>
