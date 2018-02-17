@@ -11,7 +11,7 @@ const Vote = require('./Vote');
 const Home = function() { 
   return (
     <BrowserRouter>
-      <div>
+      <div style={{ fontFamily: '\'Oxygen\', sans-serif' }}>
         <Header />
         <div style={{ paddingTop: 50 }}>
           <Route exact path="/" component={HomeContent} />

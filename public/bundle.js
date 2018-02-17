@@ -31716,7 +31716,7 @@ const Vote = __webpack_require__(502);
 const Home = function() { 
   return (
     React.createElement(BrowserRouter, null, 
-      React.createElement("div", null, 
+      React.createElement("div", {style: {  }}, 
         React.createElement(Header, null), 
         React.createElement("div", {style: { paddingTop: 50}}, 
           React.createElement(Route, {exact: true, path: "/", component: HomeContent}), 
@@ -46669,7 +46669,7 @@ const properties = [
   },
   {
     name: 'Alaskan Wilderness',
-    submitter: 'Jamie. L',
+    submitter: 'Joseph Q.',
     whyDesc: 'This land means so much to me. It runs right by the river that I grew up next to. We used to raft down to Denver, but this property is now under risk of deforestation and mining. Please help me protect this sacred property!',
     imageUrl: 'https://static1.squarespace.com/static/5324cb3ae4b0c5c3326a28c8/533e10bee4b0258f11587f51/55b4210de4b0b31e18d4ff29/1437868302698/echo-lake-ancient-forest-aerial.jpg',
     cost: '$67,000',
@@ -46677,9 +46677,9 @@ const properties = [
   },
   {
     name: 'Oregon Butte, Echo Lake',
-    submitter: 'Jamie. L',
+    submitter: 'Leonard C.',
     whyDesc: 'This land means so much to me. It runs right by the river that I grew up next to. We used to raft down to Denver, but this property is now under risk of deforestation and mining. Please help me protect this sacred property!',
-    imageUrl: '',
+    imageUrl: 'http://www.dronestagr.am/wp-content/uploads/2017/10/Aerial-Lake-700_-1-1200x800.jpg',
     cost: '$90,000',
     votes: '497',
   },
@@ -46697,9 +46697,11 @@ const Vote = function() {
         properties.map(property => (
           React.createElement("div", {style: { padding: 16, margin: 16, borderColor: '#ddd', borderWidth: 1, borderStyle: 'solid'}, key: property.name, className: "container"}, 
             React.createElement("div", {style: { margin: 'auto', maxWidth: '100%'}, className: "row"}, 
-              React.createElement("div", {style: { height: 300, backgroundImage: `url(${property.imageUrl})`}, className: "col-sm-4"}
+              React.createElement("div", {style: { height: 300, backgroundImage: `url(${property.imageUrl})`}, className: "col-sm-4"}), 
+              React.createElement("div", {style: { fontWeight: 600, paddingTop: 12, fontSize: 22}}, 
+                React.createElement("div", null, property.name)
               ), 
-              React.createElement("div", {style: { paddingTop: 12, fontSize: 17}, className: "col-sm-8"}, 
+              React.createElement("div", {style: { fontSize: 17}, className: "col-sm-8"}, 
                 React.createElement("div", null, "Name of submitter: ", property.submitter), 
                 React.createElement("div", null, "Submitter's appeal: ", property.whyDesc), 
                 React.createElement("div", null, "Property cost: ", property.cost), 
