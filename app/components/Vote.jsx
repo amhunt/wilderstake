@@ -38,37 +38,46 @@ class Vote extends React.Component {
     super(props);
     
     this.state = {
-      timeRemainingStr: null,
+      timeRemaining: null,
     };
   }
   
-  render() {
-    const { timeRemainingStr } = this.state;
-    
+  componentDidMount() {
     if (typeof window.web3 !== 'undefined') {
       console.log('using mist or metamask');
       const newWeb3 = new Web3(window.web3.currentProvider);
       this.web3 = newWeb3;
-    } else {
-      alert('Please install Mist or MetaMask to use Blockbin');
-    }
-    
-    if (this.web3 && !this.state.timeRemainingStr) {
       this.web3.eth.getBlockNumber((error, result) => {
         const remainingBlocks = result % 84000;
         const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
         var date = new Date(null);
         date.setSeconds(estRemainingTimeSecs);
-        this.setState({ timeRemainingStr: date.toISOString().substr(11, 8) });
+        this.setState({ timeRemaining: date });
       });
+    } else {
+      alert('Please install Mist or MetaMask to use Blockbin');
     }
+    
+    // if (this.web3 && !this.state.timeRemaining) {
+    //   this.web3.eth.getBlockNumber((error, result) => {
+    //     const remainingBlocks = result % 84000;
+    //     const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
+    //     var date = new Date(null);
+    //     date.setSeconds(estRemainingTimeSecs);
+    //     this.setState({ timeRemaining: date });
+    //   });
+    // }
+  }
   
+  render() {
+    const { timeRemaining } = this.state;
+      
     return (
       <div>
         <div style={{ textAlign: 'center', paddingBottom: 20 }}>
           <h2>What should we buy next?</h2>
           <h3>Use your stake to vote:</h3>
-          {timeRemainingStr && (<Estimate timeRemainingStr={timeRemainingStr} />)}
+          {timeRemaining && (<Estimate timeRemaining={timeRemaining} />)}
         </div>
         <div>
           {properties.map(property => (
