@@ -1,5 +1,5 @@
 const React = require('react');
-const Explan = require('./Explana');
+const Explanation = require('./Explanation');
 const Header = require('./Header');
 const { Button } = require('react-bootstrap');
 
@@ -22,7 +22,7 @@ const Contribute = function() {
           </div>
         </div>
       </div>
-      <Explana />
+      <Explanation />
     </div>
   );
 }
