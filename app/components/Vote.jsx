@@ -1,7 +1,6 @@
 const React = require('react');
 const Web3 = require('web3');
-
-const { Button } = 'react-bootstrap';
+const { Button } = require('react-bootstrap');
 
 const properties = [
   {
@@ -39,11 +38,18 @@ const Vote = function() {
   } else {
     alert('Please install Mist or MetaMask to use Blockbin');
   }
+  let remainingBlocks;
+  let estRemainingTime;
+  if (this.web3) {
+    remainingBlocks = this.web3.eth.currentBlock % 84000;
+    estRemainingTime = this.web3.eth.
+  }
+  
   return (
     <div>
       <div style={{ textAlign: 'center', paddingBottom: 20 }}>
         <h2>What should we buy next?</h2>
-        <h3>Cast your vote:</h3>
+        <h3>Use your stake to vote:</h3>
       </div>
       <div>
         {properties.map(property => (
@@ -58,7 +64,7 @@ const Vote = function() {
                 <div>Submitter's appeal: {property.whyDesc}</div>
                 <div>Property cost: {property.cost}</div>
                 <div>Current votes: {property.votes}</div>
-                <div style={{
+                <Button style={{ position: 'absolute' }}>Vote</Button>
               </div>
             </div>
           </div>
