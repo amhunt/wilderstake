@@ -23,7 +23,7 @@ const Home = function() {
       <div className="container" style={{ paddingTop: 50 }}>
         <div style={{ textAlign: 'center' }} className="row">
           <div className="col-sm-6">
-            <h1 style={{ paddingTop: 14, color: '#567D3E' }}>
+            <h1 style={{ paddingTop: 8, color: '#567D3E' }}>
               WilderStake
             </h1>
             <h2 className="bold">

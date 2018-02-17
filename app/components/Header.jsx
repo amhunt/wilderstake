@@ -21,12 +21,15 @@ const items = [
 
 const Header = function() {
   return (
-    <div style={{ float, float: 'right', paddingTop: 6 }}>
-      {items.map((item, i) => (
-        <span style={{ fontSize: 20, paddingRight: 12 }} key={i}>
-          <a style={{ color: '#333' }} href={item.href}>{item.name}</a>
-        </span>
-      ))}
+    <div style={{ background: 'white', zIndex: 200, height: 42, width: '100%', borderBottomStyle: 'solid', borderBottomColor: '#ddd', borderBottomWidth: 1, position: 'fixed' }}>
+      <div style={{ display: 'inline-block' }}><img style={{ width: 41, height: 41 }} src="https://cdn.glitch.com/471debc4-30c7-4d8b-8218-7591bd219e08%2Flogo.png?1518851333557" /></div>
+      <div style={{ display: 'inline-block', float: 'right', paddingTop: 6 }}>
+        {items.map((item, i) => (
+          <span style={{ fontSize: 20, paddingRight: 12 }} key={i}>
+            <a style={{ color: '#333' }} href={item.href}>{item.name}</a>
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
