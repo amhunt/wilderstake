@@ -45,6 +45,7 @@ const Vote = function() {
   if (this.web3) {
     remainingBlocks = this.web3.eth.currentBlock % 84000;
     const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
+    debugger;
     var date = new Date(null);
     date.setSeconds(estRemainingTimeSecs);
     timeRemainingStr = date.toISOString().substr(11, 8);
@@ -56,7 +57,10 @@ const Vote = function() {
         <h2>What should we buy next?</h2>
         <h3>Use your stake to vote:</h3>
         {this.web3 && (
-          )}
+          <div>
+            There's an estimated {timeRemainingStr} until the next purchase.
+          </div>
+        )}
       </div>
       <div>
         {properties.map(property => (
