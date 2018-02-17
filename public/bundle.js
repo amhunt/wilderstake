@@ -53308,12 +53308,13 @@ const Vote = function() {
   let remainingBlocks;
   let timeRemainingStr;
   if (this.web3) {
-    remainingBlocks = this.web3.eth.currentBlock % 84000;
-    const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
-    debugger;
-    var date = new Date(null);
-    date.setSeconds(estRemainingTimeSecs);
-    timeRemainingStr = date.toISOString().substr(11, 8);
+    this.web3.eth.getBlockNumber((error, result) => {
+      remainingBlocks = this.web3.eth.currentBlock % 84000;
+      const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
+      var date = new Date(null);
+      date.setSeconds(estRemainingTimeSecs);
+      timeRemainingStr = date.toISOString().substr(11, 8);
+    });
   }
   
   return (
@@ -53321,10 +53322,8 @@ const Vote = function() {
       React.createElement("div", {style: { textAlign: 'center', paddingBottom: 20}}, 
         React.createElement("h2", null, "What should we buy next?"), 
         React.createElement("h3", null, "Use your stake to vote:"), 
-        this.web3 && (
-          React.createElement("div", null, 
-            "There's an estimated ", timeRemainingStr, " until the next purchase."
-          )
+        timeRemainingStr && (
+          React.createElement(Estimate, {timeRemainingStr: timeRemainingStr})
         )
       ), 
       React.createElement("div", null, 

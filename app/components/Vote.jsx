@@ -43,12 +43,13 @@ const Vote = function() {
   let remainingBlocks;
   let timeRemainingStr;
   if (this.web3) {
-    remainingBlocks = this.web3.eth.currentBlock % 84000;
-    const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
-    debugger;
-    var date = new Date(null);
-    date.setSeconds(estRemainingTimeSecs);
-    timeRemainingStr = date.toISOString().substr(11, 8);
+    this.web3.eth.getBlockNumber((error, result) => {
+      remainingBlocks = this.web3.eth.currentBlock % 84000;
+      const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
+      var date = new Date(null);
+      date.setSeconds(estRemainingTimeSecs);
+      timeRemainingStr = date.toISOString().substr(11, 8);
+    });
   }
   
   return (
@@ -56,10 +57,8 @@ const Vote = function() {
       <div style={{ textAlign: 'center', paddingBottom: 20 }}>
         <h2>What should we buy next?</h2>
         <h3>Use your stake to vote:</h3>
-        {this.web3 && (
-          <div>
-            There's an estimated {timeRemainingStr} until the next purchase.
-          </div>
+        {timeRemainingStr && (
+          <Estimate timeRemainingStr={timeRemainingStr} />
         )}
       </div>
       <div>
