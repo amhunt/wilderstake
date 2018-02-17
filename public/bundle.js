@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 225);
@@ -31703,7 +31703,7 @@ module.exports = ReactDOMInvalidARIAHook;
 /* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const { Router, Route } = __webpack_require__(172);
+const { BrowserRouter, Route } = __webpack_require__(172);
 
 const React = __webpack_require__(0);
 const UnorderedList = __webpack_require__(111);
@@ -31714,7 +31714,7 @@ const Contribute = __webpack_require__(354);
 /* the main page for the index route of this app */
 const Home = function() { 
   return (
-    React.createElement(Router, null, 
+    React.createElement(BrowserRouter, null, 
       React.createElement("div", null, 
         React.createElement(Header, null), 
         React.createElement("div", {style: { paddingTop: 50}}, 

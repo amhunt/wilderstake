@@ -6,9 +6,13 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   module: {
     loaders: [
@@ -19,8 +23,5 @@ module.exports = {
         include: path.join(__dirname, 'app'),
       },
     ],
-  },
-  devServer: {
-    historyApiFallback: true,
   },
 };

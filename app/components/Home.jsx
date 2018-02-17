@@ -1,4 +1,4 @@
-const { Router, Route } = require('react-router-dom');
+const { BrowserRouter, Route } = require('react-router-dom');
 
 const React = require('react');
 const UnorderedList = require('./UnorderedList');
@@ -9,7 +9,7 @@ const Contribute = require('./Contribute');
 /* the main page for the index route of this app */
 const Home = function() { 
   return (
-    <Router>
+    <BrowserRouter>
       <div>
         <Header />
         <div style={{ paddingTop: 50 }}>
@@ -19,7 +19,7 @@ const Home = function() {
           <Route path="/vote" component={UnorderedList} />
         </div>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
