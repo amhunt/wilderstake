@@ -9751,9 +9751,9 @@ const React = __webpack_require__(32);
 const ReactDOM = __webpack_require__(98);
 
 /* Import Components */
-const HelloWorld = __webpack_require__(184);
+const Home = __webpack_require__(184);
 
-ReactDOM.render(React.createElement(HelloWorld, null), document.getElementById('main'));
+ReactDOM.render(React.createElement(Home, null), document.getElementById('main'));
 
 /***/ }),
 /* 83 */
@@ -22387,6 +22387,7 @@ module.exports = ReactDOMInvalidARIAHook;
 
 const React = __webpack_require__(32);
 const UnorderedList = __webpack_require__(185);
+const Header = __webpack_require__(186);
 
 const dependenciesArray = [
   'express - middleware for the node server',
@@ -22397,26 +22398,29 @@ const dependenciesArray = [
 ];
 
 const componentsMade = [
-  'HelloWorld - which is the view you are seeing now!',
+  'Home - which is the view you are seeing now!',
   'UnorderedList - which takes an array of "items" and returns a <ul> element with <li>, elements of each of those items within it',
 ];
 
 /* the main page for the index route of this app */
-const HelloWorld = function() {
+const Home = function() {
   return (
     React.createElement("div", null, 
-      React.createElement("div", {className: "container"}, 
+      React.createElement(Header, null), 
+      React.createElement("div", {className: "container", style: { paddingTop: 30}}, 
         React.createElement("div", {className: "row"}, 
-          React.createElement("div", {className: "col"}, 
-            React.createElement("h1", null, 
+          React.createElement("div", {style: { textAlign: 'center'}, className: "col-sm-6"}, 
+            React.createElement("h1", {style: { paddingTop: 14, color: '#567D3E'}}, 
               "WilderStake"
             ), 
             React.createElement("h2", {className: "bold"}, 
               "conservation, together"
+            ), 
+            React.createElement("p", {style: { paddingTop: 12, fontSize: 24}}, 
+              "FIll filll fill fill fill fill fill fill fill fill fill fill fill fill fill fill fill fill fill fill fill fill fill fill fill fill"
             )
           ), 
-          
-          React.createElement("div", {className: "col"}, 
+          React.createElement("div", {className: "col-sm-6"}, 
             React.createElement("img", {style: { maxWidth: 500}, src: "https://cdn.glitch.com/471debc4-30c7-4d8b-8218-7591bd219e08%2Fsergei-akulich-47326.jpg?1518850404671"})
           )
         )
@@ -22434,7 +22438,7 @@ const HelloWorld = function() {
   );
 }
 
-module.exports = HelloWorld;
+module.exports = Home;
 
 /***/ }),
 /* 185 */
@@ -22455,6 +22459,12 @@ const UnorderedList = function({ items }) {
 }
 
 module.exports = UnorderedList;
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports) {
+
+
 
 /***/ })
 /******/ ]);
