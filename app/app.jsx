@@ -5,8 +5,6 @@ const ReactDOM = require('react-dom');
 const Home = require('./components/Home');
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Home />
-  </BrowserRouter>,
+  <Home />,
   document.getElementById('main')
 );
