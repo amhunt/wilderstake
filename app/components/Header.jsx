@@ -1,15 +1,34 @@
 const React = require('react');
 
-/* takes an array prop 'items' and returns a <ul> element 
-   with each item as <li> elements */
-const He = function({ items }) {
+const items = [
+  {
+    name: 'Home',
+    url: '/home',
+  },
+  {
+    name: 'About',
+    url: '/about',
+  },
+  {
+    name: 'Contribute',
+    url: '/contribute',
+  },
+  {
+    name: 'Vote',
+    url: '/vote',
+  },
+]
+
+const Header = function() {
   return (
-    <ul>
-      {items.map(function(item, i) {
-        return <li key={i}>{item}</li>;
-      })}
-    </ul>
+    <div style={{ float: 'right', paddingTop: 6 }}>
+      {items.map((item, i) => (
+        <span style={{ fontSize: 20, paddingRight: 12 }} key={i}>
+          <a style={{ color: '#333' }} href={item.href}>{item.name}</a>
+        </span>
+      ))}
+    </div>
   );
 }
 
-module.exports = He;
+module.exports = Header;

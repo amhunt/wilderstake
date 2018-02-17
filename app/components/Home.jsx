@@ -20,9 +20,9 @@ const Home = function() {
   return (
     <div>
       <Header />
-      <div className="container" style={{ paddingTop: 30 }}>
-        <div className="row">
-          <div style={{ textAlign: 'center' }} className="col-sm-6">
+      <div className="container" style={{ paddingTop: 50 }}>
+        <div style={{ textAlign: 'center' }} className="row">
+          <div className="col-sm-6">
             <h1 style={{ paddingTop: 14, color: '#567D3E' }}>
               WilderStake
             </h1>
@@ -34,13 +34,10 @@ const Home = function() {
             </p>
           </div>
           <div className="col-sm-6">
-            <img style={{ maxWidth: 500 }} src="https://cdn.glitch.com/471debc4-30c7-4d8b-8218-7591bd219e08%2Fsergei-akulich-47326.jpg?1518850404671" />
+            <img style={{ width: 500, maxWidth: '100%' }} src="https://cdn.glitch.com/471debc4-30c7-4d8b-8218-7591bd219e08%2Fsergei-akulich-47326.jpg?1518850404671" />
           </div>
         </div>
       </div>
-
-      <p>This is a starter <a href="http://glitch.com">Glitch</a> app for React! It uses 
-        only a few dependencies to get you started on working with React:</p>
 
       <UnorderedList items={dependenciesArray} />
 

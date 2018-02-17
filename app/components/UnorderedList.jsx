@@ -1,15 +1,18 @@
 const React = require('react');
 
+const explanationPoints = [
+  
+  ]
+
 /* takes an array prop 'items' and returns a <ul> element 
    with each item as <li> elements */
-const UnorderedList = function({ items }) {
+const Explanation = function() {
   return (
-    <ul>
-      {items.map(function(item, i) {
-        return <li key={i}>{item}</li>;
-      })}
-    </ul>
+    <div className="row">
+      <div className="col-4-sm">
+      </div>
+    </div>
   );
 }
 
-module.exports = UnorderedList;
+module.exports = Explanation;
