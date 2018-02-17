@@ -22441,7 +22441,7 @@ const React = __webpack_require__(24);
 const explanationPoints = [
   {
     title: '1. Buy stake',
-    description: 'Buy stake for Eth so that you can participate in conservation elections.'
+    description: 'Buy stake for Eth so that you can participate in conservation elections. So impactful! WoW! Impact!'
   },
   {
     title: '2. Vote on land to preserve',
