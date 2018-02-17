@@ -22405,16 +22405,21 @@ const componentsMade = [
 const HelloWorld = function() {
   return (
     React.createElement("div", null, 
-      React.createElement("div", {class: "column-stuff"}, 
-        React.createElement("h1", null, 
-          "WilderStake"
-        ), 
-        React.createElement("h2", {class: "bold"}, 
-          "conservation, together"
+      React.createElement("div", {className: "container"}, 
+        React.createElement("div", {className: "row"}, 
+          React.createElement("div", {className: "col"}, 
+            React.createElement("h1", null, 
+              "WilderStake"
+            ), 
+            React.createElement("h2", {className: "bold"}, 
+              "conservation, together"
+            )
+          ), 
+          
+          React.createElement("div", {className: "col"}, 
+            React.createElement("img", {style: { maxWidth: 500}, src: "https://cdn.glitch.com/471debc4-30c7-4d8b-8218-7591bd219e08%2Fsergei-akulich-47326.jpg?1518850404671"})
+          )
         )
-      ), 
-      React.createElement("div", {class: "column-stuff"}, 
-        React.createElement("img", {style: { maxWidth: 500}, src: "https://cdn.glitch.com/471debc4-30c7-4d8b-8218-7591bd219e08%2Fsergei-akulich-47326.jpg?1518850404671"})
       ), 
 
       React.createElement("p", null, "This is a starter ", React.createElement("a", {href: "http://glitch.com"}, "Glitch"), " app for React! It uses" + " " + 

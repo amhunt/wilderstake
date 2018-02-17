@@ -18,16 +18,21 @@ const componentsMade = [
 const HelloWorld = function() {
   return (
     <div>
-      <div class="column-stuff">
-        <h1>
-          WilderStake
-        </h1>
-        <h2 class="bold">
-          conservation, together
-        </h2>
-      </div>
-      <div class="column-stuff">
-        <img style={{ maxWidth: 500 }} src="https://cdn.glitch.com/471debc4-30c7-4d8b-8218-7591bd219e08%2Fsergei-akulich-47326.jpg?1518850404671" />
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <h1>
+              WilderStake
+            </h1>
+            <h2 className="bold">
+              conservation, together
+            </h2>
+          </div>
+          
+          <div className="col">
+            <img style={{ maxWidth: 500 }} src="https://cdn.glitch.com/471debc4-30c7-4d8b-8218-7591bd219e08%2Fsergei-akulich-47326.jpg?1518850404671" />
+          </div>
+        </div>
       </div>
 
       <p>This is a starter <a href="http://glitch.com">Glitch</a> app for React! It uses 
