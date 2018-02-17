@@ -1,4 +1,5 @@
 const React = require('react');
+const moment = require('moment');
 const Web3 = require('web3');
 const { Button } = require('react-bootstrap');
 const Estimate = require('./Estimate');
@@ -51,22 +52,13 @@ class Vote extends React.Component {
         const remainingBlocks = result % 84000;
         const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
         var date = new Date(null);
-        date.setSeconds(estRemainingTimeSecs);
+        new moment(date.setSeconds(estRemainingTimeSecs).toISOString());
+        debugger;
         this.setState({ timeRemaining: date });
       });
     } else {
       alert('Please install Mist or MetaMask to use Blockbin');
     }
-    
-    // if (this.web3 && !this.state.timeRemaining) {
-    //   this.web3.eth.getBlockNumber((error, result) => {
-    //     const remainingBlocks = result % 84000;
-    //     const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
-    //     var date = new Date(null);
-    //     date.setSeconds(estRemainingTimeSecs);
-    //     this.setState({ timeRemaining: date });
-    //   });
-    // }
   }
   
   render() {

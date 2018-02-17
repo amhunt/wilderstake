@@ -4,7 +4,7 @@ const React = require('react');
 const Estimate = function({ timeRemaining }) {
   return (
     <div>
-      There's an estimated {timeRemaining.toISOString()} until the next purchase.
+      There's an estimated {timeRemaining} until the next purchase.
     </div>
   );
 }
