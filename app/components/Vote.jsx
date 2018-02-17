@@ -51,9 +51,7 @@ class Vote extends React.Component {
       this.web3.eth.getBlockNumber((error, result) => {
         const remainingBlocks = result % 84000;
         const estRemainingTimeSecs = remainingBlocks * BLOCK_TIME_SEC;
-        var date = new Date(null);
-        new moment(date.setSeconds(estRemainingTimeSecs).toISOString());
-        debugger;
+        const date = moment.duration(estRemainingTimeSecs, 'seconds');
         this.setState({ timeRemaining: date });
       });
     } else {
