@@ -83,7 +83,7 @@ class Vote extends React.Component {
                     <div>Submitter's appeal: {property.whyDesc}</div>
                     <div>Property cost: {property.cost}</div>
                     <div>Current votes: {property.votes}</div>
-                    <div style={{ fontWeight: 'bold' }}> <Button style={{ position: 'absolute' }}>Vote</Button></div>
+                    <div style={{ fontWeight: 'bold' }}> <Button style={{ fontSize: 24, color: 'white', background: 'green', fontWeight: 700, border: 0, borderRadius: 3 }}>Vote</Button></div>
                   </div>
                 </div>
               </div>
